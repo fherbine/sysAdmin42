@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ -e $1 ] && [ $1 ]
+then
+	ls -S $1
+else
+	echo "Dossier manquant, ou inexistant..."
+	echo "usage: ./03 file_path"
+fi

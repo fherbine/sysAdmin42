@@ -1,0 +1,4 @@
+#!/bin/bash
+
+0 4 * * 1 root apt-get update >> /var/log/update_script.log
+0 4 * * 1 root apt-get upgrade >> /var/log/update_script.log

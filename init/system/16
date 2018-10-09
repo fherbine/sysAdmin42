@@ -1,0 +1,7 @@
+Cron situé dans /etc/init.d/cron va nous permettre de lancer des taches à
+horaires regulieres de la maniere suivante :
+
+	| minutes | heures | jours/mois | mois | jours/semaine |
+	|=========|========|============|======|===============|
+	| * / 0-x | * / 0-x|   * / 0-x  | */0-x|   * / 0-x     |
+	|======================================================|

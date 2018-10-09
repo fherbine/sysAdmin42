@@ -1,4 +1,5 @@
+
 #!/bin/bash
 
-0 4 * * 1 root apt-get update >> /var/log/update_script.log
-0 4 * * 1 root apt-get upgrade >> /var/log/update_script.log
+echo "0 4 * * 1 root apt-get update >> /var/log/update_script.log" |  crontab
+echo "0 4 * * 1 root apt-get upgrade >> /var/log/update_script.log" >> /var/spool/cron/crontabs/root

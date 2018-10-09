@@ -1,0 +1,3 @@
+Pour faire cela il faudra que je modifie le fichier etc/hosts avec l'ip et l'url
+sur /etc/hosts en ajoutant la ligne suivante:
+46.19.122.85      intra.42.fr

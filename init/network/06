@@ -1,0 +1,5 @@
+Le path complet du fichier pour trouver l'adresse du serveur DNS que j'utilise sera :
+		"/etc/resolve.conf"
+En effet dans ce fichier, les serveur DNS que je pourrais utiliser seront
+definit de la maniere suivante : 
+		"nameserver [adresse IP du serveur en question]"

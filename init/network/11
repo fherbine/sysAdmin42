@@ -1,0 +1,5 @@
+En faisant la commande precendente, on identifie le materiel nat-1, il s'agit 
+de la partie Network Address Translation de notre routeur, qui fait correspondre
+des adresses IP a d'autres dans notre cas les IP locales de nos MAC delivrées 
+par le DHCP du routeur.
+l'adresse IP du nat-1 est : 10.60.1.11

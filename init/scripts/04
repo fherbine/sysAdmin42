@@ -1,8 +1,19 @@
 #!/bin/bash
 
-if [-e "/var/log/mdchk"]
-	md5sum
+if [ -e "/var/log/mdchk" ]
+then
+	md5sum /etc/crontab > /tmp/mdchk
+	diff /tmp/mdchk /var/log/mdchk > /tmp/mddf
+	df=`cat /tmp/mddf`
+	if [ "$df" = "" ]
+	then
+		echo "no changes"
+	else
+		echo "The file /etc/crontab has been updated." | mail -s crontab_updt root
+	fi
+	md5sum /etc/crontab > /var/log/mdchk
 else
-	echo "0 0 * * * root $PWD/04"
+	chmod 777 $PWD/04
+	echo "0 0 * * * root $PWD/04" | crontab
 	md5sum /etc/crontab > /var/log/mdchk
 fi

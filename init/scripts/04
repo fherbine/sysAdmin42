@@ -1,3 +1,8 @@
 #!/bin/bash
 
-
+if [-e "/var/log/mdchk"]
+	md5sum
+else
+	echo "0 0 * * * root $PWD/04"
+	md5sum /etc/crontab > /var/log/mdchk
+fi
